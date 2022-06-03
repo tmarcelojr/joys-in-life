@@ -8,7 +8,7 @@ API for travel app to organize ideas and trip planning.
 ### Development Process
    DATE 		 | 		  PROGRESS     |     BLOCKS 		 |  	 GOALS     |
 ------------ | ----------------- | --------------- | ------------- |
-06/02/2022 | Folder structure created. CRUD functioning. | None | Complete routes for Trip model. |
+06/02/2022 | Folder structure created. Functional CRUD on Trip, Tag, and Activity. | None | Implement Users and Auth |
 
 ## Models
 ***
