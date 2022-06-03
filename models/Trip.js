@@ -5,7 +5,8 @@ const tripSchema = new Schema({
     destination: {type: String, required: true},
     name: String,
     startDate: Date,
-    endDate: Date
+    endDate: Date,
+    timestamps: true
 })
 
 module.exports = mongoose.model('Trip', tripSchema)
