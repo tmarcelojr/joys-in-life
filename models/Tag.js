@@ -6,7 +6,7 @@ const tagSchema = new Schema({
     slug: String,
     activity: [
         {
-            type: mongoose.Schema.Types.ObjectId,
+            type: Schema.Types.ObjectId,
             ref: "Activity"
         }
     ]

@@ -10,7 +10,7 @@ router.get('/:id', tripsCtrl.show)
 router.post('/', tripsCtrl.create)
 // PUT /api/v1/trips/:id
 router.put('/:id', tripsCtrl.update)
-// DELETR /api/v1/trips/:id
+// DELETE /api/v1/trips/:id
 router.delete('/:id', tripsCtrl.remove)
 
 module.exports = router

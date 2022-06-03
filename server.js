@@ -4,13 +4,18 @@ require('./config/database')
 const express = require('express')
 const app = express()
 
-// Middlewares
+// ===== MIDDLEWARES =====
 app.use(express.json())
 
-// Routes
+// ===== ROUTES =====
+// Trips
 app.use('/api/v1/trips', require('./routes/api/trips.js'))
+// Tags
+app.use('/api/v1/tags', require('./routes/api/tags.js'))
+// Activity
+app.use('/api/v1/activities', require('./routes/api/activities.js'))
 
-// Port
+// ===== PORT =====
 const port = process.env.PORT || 8080
 
 app.listen(port, () => console.log(`Express app running on port ${port}`))

@@ -5,7 +5,7 @@ const activitySchema = new Schema({
     type: String,
     notes: String,
     tags: [{
-        type: mongoose.Schema.Types.ObjectId,
+        type: Schema.Types.ObjectId,
         ref: "Tag"
     }]
 })
