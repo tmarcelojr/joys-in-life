@@ -7,7 +7,8 @@ const activitySchema = new Schema({
     tags: [{
         type: Schema.Types.ObjectId,
         ref: "Tag"
-    }],
+    }]
+}, {
     timestamps: true
 })
 

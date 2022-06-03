@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const tripSchema = new Schema({
-    destination: {type: String, required: true},
+    destination: { type: String, required: true },
     name: String,
     startDate: Date,
     endDate: Date,
@@ -11,7 +11,8 @@ const tripSchema = new Schema({
             type: Schema.Types.ObjectId,
             ref: "Activity"
         }
-    ],
+    ]
+}, {
     timestamps: true
 })
 

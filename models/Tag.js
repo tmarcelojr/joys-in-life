@@ -9,7 +9,8 @@ const tagSchema = new Schema({
             type: Schema.Types.ObjectId,
             ref: "Activity"
         }
-    ],
+    ]
+}, {
     timestamps: true
 })
 
