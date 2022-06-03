@@ -3,7 +3,13 @@ const Trip = require('../../models/Trip')
 // Finds all trips
 async function index(req, res) {
     try {
-        const trips = await Trip.find({}).populate('activities').exec()
+        const trips = await Trip.find({}).populate({
+            path: 'activities',
+            populate: {
+                path: 'tags',
+                model: 'Tag'
+            }
+        }).exec()
         res.status(200).json(trips)
     } catch(e) {
         res.status(400).json({msg: e.message})
