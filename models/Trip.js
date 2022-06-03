@@ -6,6 +6,12 @@ const tripSchema = new Schema({
     name: String,
     startDate: Date,
     endDate: Date,
+    activities: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Activity"
+        }
+    ],
     timestamps: true
 })
 
