@@ -3,7 +3,7 @@ const Tag = require('../../models/Tag')
 // Finds all tags
 async function index(req, res) {
     try {
-        const tags = await Tag.find({})
+        const tags = await Tag.find({}).populate('activities').exec()
         res.status(200).json(tags)
     } catch(e) {
         res.status(400).json({msg: e.message})

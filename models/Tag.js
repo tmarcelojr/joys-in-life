@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const tagSchema = new Schema({
     name: String,
     slug: String,
-    activity: [
+    activities: [
         {
             type: Schema.Types.ObjectId,
             ref: "Activity"

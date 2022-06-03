@@ -20,6 +20,18 @@ Trip = {
     startDate: String,
     endDate: String
 }
+
+Activity = {
+    type: String,
+    notes: String,
+    tags: [String, ref=Tag]
+}
+
+Tag = {
+    name: String,
+    slug: String,
+    activities: [String, ref=Activity]
+}
 ```
 
 ## Routes
