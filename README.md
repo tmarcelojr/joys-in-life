@@ -8,7 +8,7 @@ API for travel app to organize ideas and trip planning.
 ### Development Process
    DATE 		 | 		  PROGRESS     |     BLOCKS 		 |  	 GOALS     |
 ------------ | ----------------- | --------------- | ------------- |
-06/02/2022 | Folder structure created. Trip Index & Create routes functioning. | None | Complete routes for Trip model. |
+06/02/2022 | Folder structure created. CRUD functioning. | None | Complete routes for Trip model. |
 
 ## Models
 ***
@@ -29,7 +29,10 @@ Trip = {
    VERB 		 | 		  PATH 		 |  	 DESCRIPTION
 ------------ | ------------- | -------------------
 GET | /api/v1/trips | list of trips |
-POST | /api/v1/trips | adds new trip to database |
+GET | /api/v1/trips/:id | returns one trip |
+POST | /api/v1/trips | adds new trip |
+PUT | /api/v1/trips/:id | updates one trip |
+DELETE | /api/v1/trips/:id | deletes one trip |
 
 ## Technologies
 ***
