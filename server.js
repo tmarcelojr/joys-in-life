@@ -8,7 +8,7 @@ const app = express()
 app.use(express.json())
 
 // Routes
-app.use('/api/trips', require('./routes/api/trips.js'))
+app.use('/api/v1/trips', require('./routes/api/trips.js'))
 
 // Port
 const port = process.env.PORT || 8080
