@@ -9,7 +9,7 @@ API for travel app to organize ideas and trip planning.
    DATE 		 | 		  PROGRESS     |     BLOCKS 		 |  	 GOALS     |
 ------------ | ----------------- | --------------- | ------------- |
 06/02/2022 | Folder structure created. Functional CRUD on Trip, Tag, and Activity. | None | Implement Users and Auth |
-06/04/2022 | Functioning CRUD on User. | None | Email verification. |
+06/04/2022 | Functioning CRUD on User. Auth implemented. User model linked with Trip. | None | Email verification. |
 
 ## Models
 ***
@@ -99,5 +99,9 @@ DELETE | /api/v1/tags/:id | deletes one tag |
 ## Stretch Goals
 ***
 1. Email verification.
-2. Implement Auth0. 
+2. Implement Auth0.
+
+## Seed
+***
+1. Seed file located in config. Run for testing.
  
