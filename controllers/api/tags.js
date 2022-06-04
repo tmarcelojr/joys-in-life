@@ -33,8 +33,8 @@ async function update(req, res) {
 // Deletes a tag
 async function remove(req, res) {
     try {
-        const updatedTrip = await Tag.findByIdAndDelete(req.params.id)
-        res.status(200).json(updatedTag)
+        const deletedTrip = await Tag.findByIdAndDelete(req.params.id)
+        res.status(200).json(deletedTag)
     } catch(e) {
         res.status(400).json({msg: e.message})
     }

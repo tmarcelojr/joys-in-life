@@ -49,8 +49,8 @@ async function update(req, res) {
 // Deletes a trip
 async function remove(req, res) {
     try {
-        const updatedTrip = await Trip.findByIdAndDelete(req.params.id)
-        res.status(200).json(updatedTrip)
+        const deletedTrip = await Trip.findByIdAndDelete(req.params.id)
+        res.status(200).json(deletedTrip)
     } catch(e) {
         res.status(400).json({msg: e.message})
     }

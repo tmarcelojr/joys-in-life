@@ -43,8 +43,8 @@ async function update(req, res) {
 // Deletes a Activity
 async function remove(req, res) {
     try {
-        const updatedActivity = await Activity.findByIdAndDelete(req.params.id)
-        res.status(200).json(updatedActivity)
+        const deletedActivity = await Activity.findByIdAndDelete(req.params.id)
+        res.status(200).json(deletedActivity)
     } catch(e) {
         res.status(400).json({msg: e.message})
     }
