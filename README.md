@@ -9,7 +9,7 @@ API for travel app to organize ideas and trip planning.
    DATE 		 | 		  PROGRESS     |     BLOCKS 		 |  	 GOALS     |
 ------------ | ----------------- | --------------- | ------------- |
 06/02/2022 | Folder structure created. Functional CRUD on Trip, Tag, and Activity. | None | Implement Users and Auth |
-06/04/2022 | Functioning CRUD on User. Auth implemented. User model linked with Trip. | None | Email verification. |
+06/04/2022 | Functioning CRUD on User. Auth implemented. User model linked with Trip. Seed file created. | None | Email verification. Auth0. |
 
 ## Models
 ***
