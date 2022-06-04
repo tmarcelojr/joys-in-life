@@ -2,6 +2,7 @@ const jwt = require('jsonwebtoken')
 
 module.exports = function(req, res, next) {
     // Check for token being sent in a header or a query parameter
+    // console.log(req)
     let token = req.get('Authorization') || req.query.token
 
     if(token) {

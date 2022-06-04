@@ -9,11 +9,19 @@ API for travel app to organize ideas and trip planning.
    DATE 		 | 		  PROGRESS     |     BLOCKS 		 |  	 GOALS     |
 ------------ | ----------------- | --------------- | ------------- |
 06/02/2022 | Folder structure created. Functional CRUD on Trip, Tag, and Activity. | None | Implement Users and Auth |
+06/04/2022 | Functioning CRUD on User. | None | Email verification. |
 
 ## Models
 ***
 
 ```
+Users = {
+   firstName: String (required),
+   lastName: String (required),
+   email: String (required),
+   password: String (required)
+}
+
 Trip = {
     destination: String (required),
     name: String,
@@ -36,6 +44,23 @@ Tag = {
 
 ## Routes
 ***
+
+### User
+   VERB 		 | 		  PATH 		 |  	 DESCRIPTION
+------------ | ------------- | -------------------
+POST | /api/v1/users | adds new user |
+POST | /api/v1/users/login | user login |
+
+***
+*ROUTES BELOW REQUIRE AUTHORIZATION*
+***
+
+### User
+   VERB 		 | 		  PATH 		 |  	 DESCRIPTION
+------------ | ------------- | -------------------
+GET | /api/v1/users/:id | returns user|
+PUT | /api/v1/users/:id | updates user |
+DELETE | /api/v1/users/:id | deletes user |
 
 ### Trip
    VERB 		 | 		  PATH 		 |  	 DESCRIPTION
