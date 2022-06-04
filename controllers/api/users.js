@@ -2,18 +2,20 @@ const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 const User = require('../../models/User')
 
-module.exports = {
-    create,
-    show,
-    update,
-    remove,
-    login
-}
-
 // Finds a user
 async function show(req, res) {
     try {
-        const foundUser = await User.findById(req.params.id)
+        const foundUser = await User.findById(req.params.id).populate({
+            path: 'trips',
+            populate: {
+                path: 'activities',
+                model: 'Activity',
+                populate: {
+                    path: 'tags',
+                    model: 'Tag'
+                }
+            }
+        }).exec()
         res.status(200).json(foundUser)
     } catch(e) {
         res.status(400).json({msg: e.message})
@@ -84,3 +86,10 @@ const createJWT = (user) => {
     )
 }
 
+module.exports = {
+    create,
+    show,
+    update,
+    remove,
+    login
+}

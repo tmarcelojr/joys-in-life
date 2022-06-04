@@ -19,7 +19,8 @@ Users = {
    firstName: String (required),
    lastName: String (required),
    email: String (required),
-   password: String (required)
+   password: String (required),
+   trips: [String, ref=Trip]
 }
 
 Trip = {
@@ -97,3 +98,6 @@ DELETE | /api/v1/tags/:id | deletes one tag |
 
 ## Stretch Goals
 ***
+1. Email verification.
+2. Implement Auth0. 
+ 

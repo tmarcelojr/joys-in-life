@@ -19,7 +19,13 @@ const userSchema = new Schema({
         trim: true,
         minlength: 3,
         required: true
-    }
+    },
+    trips: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Trip"
+        }
+    ]
 }, {
     timestamps: true,
     toJSON: {
